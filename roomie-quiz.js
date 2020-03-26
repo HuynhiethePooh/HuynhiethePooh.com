@@ -2,6 +2,8 @@
 
 var questioncount = 0;
 var answerArray = new Array(10)
+
+//Choice Class to hold answers and Value for which roomie you are
 function Choice(text,emmy,holly,lauren,maddie){
     this.text = text;
     this.emmyValue = emmy;
@@ -10,14 +12,14 @@ function Choice(text,emmy,holly,lauren,maddie){
     this.maddieValue = maddie;
 }
 
-
+//global variable for which roommate you end up being
 var howemmy = 0;
 var howholly = 0;
 var howlauren = 0;
 var howmaddie = 0;
 
 
-
+//Array to hold questions
 var questionArray = new Array(
     "You walk into Blarney's and see the pole near the front of the room, what is your go to action?", 
     "Which of these is the most ideal way to spend your afternoon?",
@@ -31,6 +33,8 @@ var questionArray = new Array(
     "What is the first type of vacation you'll go on post-covid?"
 )
 
+//Create 4 Arrays to cycle through choices consisting of Choice objs,
+//if there were more, look into moving into external DB
 var choice1Array = new Array();
 choice1Array.push(new Choice("I'm going to go get a drink and then watch people dance there LOL",3,3,0,2));
 choice1Array.push(new Choice("Doing some cycle or yoga at Lifetime!",0,2,6,1));
@@ -87,6 +91,7 @@ document.getElementById("choice3").addEventListener("click",choice3Select);
 document.getElementById("choice4").addEventListener("click",choice4Select);
 }
 
+//4 functions to keep track of which choice was selected
 function choice1Select(){
     howemmy += choice1Array[questioncount].emmyValue
     howholly += choice1Array[questioncount].hollyValue
@@ -119,26 +124,18 @@ function choice4Select(){
     roomieQuiz()
 }
 
-
-
-
+//
 function roomieQuiz(){
     questioncount += 1; 
     if (questioncount < 10) {
-        
-    
     document.getElementById("question").innerHTML = questionArray[questioncount];
         
     document.getElementById("choice1").innerHTML = choice1Array[questioncount].text;
     document.getElementById("choice2").innerHTML = choice2Array[questioncount].text;
     document.getElementById("choice3").innerHTML = choice3Array[questioncount].text;
     document.getElementById("choice4").innerHTML = choice4Array[questioncount].text;
-    
-    
-    
-    //iterate the question we are on
-      
     }
+    
     //we are done with the quiz
     else{
         calculateResults()
