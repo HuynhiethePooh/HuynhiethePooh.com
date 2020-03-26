@@ -1,0 +1,77 @@
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Styling the quiz page */
+.quiz-body {
+    align-content: center;
+    text-align: center;
+
+}
+div#question {
+    text-align: center;
+    font-size: 42px;
+    visibility: hidden;
+}
+
+div#choice1 {
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
+    height: 100px;
+}
+
+div#choice2 {
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
+    height: 100px;
+}
+
+div#choice3 {
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
+    height: 100px;
+}
+div#choice4 {
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
+    height: 100px;
+}
+
+div#whoareyou {
+    font-size: 40px;
+}
